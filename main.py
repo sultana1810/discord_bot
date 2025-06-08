@@ -116,7 +116,7 @@ async def weather(interaction:discord.Interaction,city : str) :
 
 
 
-client.run('*******token******')
+client.run('*******bot_token******')
 
 
 

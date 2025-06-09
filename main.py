@@ -8,7 +8,7 @@ class Client(commands.Bot) :
         print(f'Logged on as {self.user}!')
 
         try:
-            guild = discord.Object(1324379938459226163)
+            guild = discord.Object(***id***)
             synced = await self.tree.sync(guild=guild)
             print(f'Synced {len(synced)} commands to guild {guild.id}')
 
@@ -43,7 +43,7 @@ intents.message_content = True
 client = Client(command_prefix="!", intents=intents)
 
 
-GUILD_ID = discord.Object(id=1324379938459226163)
+GUILD_ID = discord.Object(id=***id****)
 
 
 @client.tree.command(name="hello",description="Say hello!", guild=GUILD_ID)
@@ -89,7 +89,7 @@ async def calculate(interaction:discord.Interaction,num1:int, num2:int) :
 
 @client.tree.command(name="weather", description="Get the current weather for a city",guild=GUILD_ID)
 async def weather(interaction:discord.Interaction,city : str) :
-    api_key = "f3b597847f1661730c018e886e5fb3d8"
+    api_key = "***api_key***"
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
     response = requests.get(url)
     data = response.json()
